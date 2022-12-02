@@ -20,6 +20,7 @@ namespace studikasus_smk_nasional
         public LoginForm()
         {           
             InitializeComponent();
+            KeyPreview = true;
            
         }
 
@@ -129,9 +130,10 @@ namespace studikasus_smk_nasional
 
         private void LoginForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
-                btnLogin.PerformClick(); //shortcut press enter to login
+
+                btnLogin.PerformClick();
             }
         }
     }
