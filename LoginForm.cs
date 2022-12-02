@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using studikasus_smk_nasional.model;
 
 namespace studikasus_smk_nasional
 {
@@ -38,13 +39,13 @@ namespace studikasus_smk_nasional
             }
             else if (string.IsNullOrEmpty(edtCaptcha.Text))
             {
-                MessageBox.Show("Captcha is required");
+                labelCaptcha.Text = "Captcha is required";
                 edtCaptcha.Focus();
                 return false;
             }
             else if (edtCaptcha.Text != captcha)
             {
-                MessageBox.Show("Captcha is not valid");
+                labelCaptcha.Text = "Captcha is not valid";
                 edtCaptcha.Focus();
                 return false;
             }
@@ -75,11 +76,51 @@ namespace studikasus_smk_nasional
             Application.Exit();
         }
 
+        private void doLogin()
+        {
+            {
+                if (formIsValid())
+                {
+                    sql_utilities.con.Open();
+                    sql_utilities.cmd = new SqlCommand("SELECT * FROM [User] WHERE username = '"+edtUsername.Text+"' AND password = '"+edtPass.Text+"'", sql_utilities.con);
+                    //sql_utilities.cmd.Parameters.AddWithValue("@username", edtUsername.Text);
+                    //sql_utilities.cmd.Parameters.AddWithValue("@password", edtPass.Text);
+                    sql_utilities.reader = sql_utilities.cmd.ExecuteReader();
+                    if (sql_utilities.reader.HasRows)
+                    {
+                        sql_utilities.reader.Read();
+                        UserModel user = new UserModel(sql_utilities.reader.GetInt32(0), sql_utilities.reader.GetString(1), sql_utilities.reader.GetString(2), sql_utilities.reader.GetString(3));
+                        if (user.level == "admin")
+                        {
+                            MessageBox.Show("Login as admin Success");
+                            //AdminForm adminForm = new AdminForm();
+                            //adminForm.Show();
+                            //this.Hide();
+                        }
+                        else if (user.level == "user")
+                        {
+                            //UserForm userForm = new UserForm();
+                            //userForm.Show();
+                            //this.Hide();
+                            MessageBox.Show("Login as user Success");
+                        }
+                    }
+                   
+                    else
+                    {
+                        MessageBox.Show("Invalid login");
+                    }
+                    sql_utilities.con.Close();
+                }
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (formIsValid())
             {
                 //TODO DO Login Here
+                doLogin();
             }
         }
     }

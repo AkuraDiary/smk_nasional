@@ -10,7 +10,6 @@ namespace studikasus_smk_nasional
     {
         public static string generateCaptcha()
         {
-            
                 Random random = new Random();
                 
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

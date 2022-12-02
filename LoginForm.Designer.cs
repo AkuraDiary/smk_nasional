@@ -76,7 +76,6 @@
             this.edtCaptcha.Name = "edtCaptcha";
             this.edtCaptcha.Size = new System.Drawing.Size(142, 27);
             this.edtCaptcha.TabIndex = 38;
-            this.edtCaptcha.UseSystemPasswordChar = true;
             // 
             // labelCaptcha
             // 
@@ -86,9 +85,9 @@
             this.labelCaptcha.Location = new System.Drawing.Point(66, 310);
             this.labelCaptcha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCaptcha.Name = "labelCaptcha";
-            this.labelCaptcha.Size = new System.Drawing.Size(62, 22);
+            this.labelCaptcha.Size = new System.Drawing.Size(135, 22);
             this.labelCaptcha.TabIndex = 37;
-            this.labelCaptcha.Text = "Captcha";
+            this.labelCaptcha.Text = "Please Enter Captcha";
             this.labelCaptcha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // edtPass
@@ -136,13 +135,14 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Snow;
+            this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnClose.Location = new System.Drawing.Point(66, 419);
+            this.btnClose.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(236, 463);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(218, 34);
+            this.btnClose.Size = new System.Drawing.Size(105, 31);
             this.btnClose.TabIndex = 32;
             this.btnClose.Text = "Tutup Aplikasi";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -201,7 +201,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
-            this.Text = "    ";
+            this.Text = "   ";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
