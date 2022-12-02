@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using studikasus_smk_nasional.model;
 
 namespace studikasus_smk_nasional
 {
     static internal class utilities
     {
+        public static UserModel currentUser;
         public static string generateCaptcha()
         {
                 Random random = new Random();

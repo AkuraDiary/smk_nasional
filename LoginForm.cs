@@ -102,20 +102,10 @@ namespace studikasus_smk_nasional
                     {
                         sql_utilities.reader.Read();
                         UserModel user = new UserModel(sql_utilities.reader.GetInt32(0), sql_utilities.reader.GetString(1), sql_utilities.reader.GetString(2), sql_utilities.reader.GetString(3));
-                        if (user.level == "admin")
-                        {
-                            MessageBox.Show("Login as admin Success");
-                            //AdminForm adminForm = new AdminForm();
-                            //adminForm.Show();
-                            //this.Hide();
-                        }
-                        else if (user.level == "user")
-                        {
-                            //UserForm userForm = new UserForm();
-                            //userForm.Show();
-                            //this.Hide();
-                            MessageBox.Show("Login as user Success");
-                        }
+                        
+                        utilities.currentUser = user; // set the logged user
+                        MessageBox.Show("Login as " +utilities.currentUser.username +" Success");
+                        moveToMainMenu();
                     }
                    
                     else
@@ -167,7 +157,15 @@ namespace studikasus_smk_nasional
             {
                 //TODO DO Login Here
                 doLogin();
+                
             }
+        }
+
+        void moveToMainMenu()
+        {
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+            this.Hide();
         }
 
         private void LoginForm_KeyDown(object sender, KeyEventArgs e)

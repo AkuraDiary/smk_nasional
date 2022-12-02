@@ -22,3 +22,6 @@ E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-wind
 E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.pdb
 E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.genruntimeconfig.cache
 E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\ref\studikasus_smk_nasional.dll
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.MainMenuForm.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.MenuAdmin.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.MenuAnggota.resources
