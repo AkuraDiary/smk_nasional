@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
 using studikasus_smk_nasional.model;
 
 namespace studikasus_smk_nasional
@@ -41,11 +42,13 @@ namespace studikasus_smk_nasional
             {
                 labelCaptcha.Text = "Captcha is required";
                 edtCaptcha.Focus();
+                labelCaptcha.ForeColor = Color.Red;
                 return false;
             }
             else if (edtCaptcha.Text != captcha)
             {
                 labelCaptcha.Text = "Captcha is not valid";
+                labelCaptcha.ForeColor = Color.Red;
                 edtCaptcha.Focus();
                 return false;
             }
@@ -121,6 +124,14 @@ namespace studikasus_smk_nasional
             {
                 //TODO DO Login Here
                 doLogin();
+            }
+        }
+
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick(); //shortcut press enter to login
             }
         }
     }
