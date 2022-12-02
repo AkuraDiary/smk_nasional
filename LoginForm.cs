@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Timers;
+
 using studikasus_smk_nasional.model;
 
 namespace studikasus_smk_nasional
@@ -17,10 +19,13 @@ namespace studikasus_smk_nasional
     {
       
         public string captcha;
+        public int logincounter = 0;
+        private static System.Timers.Timer timer;
         public LoginForm()
         {           
             InitializeComponent();
             KeyPreview = true;
+            lblTimer.Hide();
            
         }
 
@@ -55,7 +60,10 @@ namespace studikasus_smk_nasional
             }
             else
             {
+                labelCaptcha.Text = "Captcha OK";
+                labelCaptcha.ForeColor = Color.SteelBlue;
                 return true;
+              
             }
         }
         private void resetCaptcha()
@@ -113,10 +121,44 @@ namespace studikasus_smk_nasional
                     else
                     {
                         MessageBox.Show("Invalid login");
+                        logincounter++;
+                        disableLoginTemp();
                     }
                     sql_utilities.con.Close();
                 }
             }
+        }
+
+        private void disableLoginTemp()
+        {
+            
+                if (logincounter == 3)
+                {
+                timer = new System.Timers.Timer(120000);
+                MessageBox.Show("You have been blocked for 2 minutes");
+                btnLogin.Enabled = false;
+                
+                timer.AutoReset = false;
+                timer.Start();
+                lblTimer.Text = "Status : Login Blocked";
+                lblTimer.Show();
+                
+                timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+                
+            }
+            
+            
+        }
+
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            Invoke(new Action(() =>
+            {
+                btnLogin.Enabled = true;
+                resetCaptcha();
+                lblTimer.Hide();
+            }));
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

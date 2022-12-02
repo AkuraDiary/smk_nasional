@@ -39,6 +39,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // captchaReset
@@ -178,12 +179,22 @@
             this.label1.Text = "LOGIN USER";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(151, 415);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(48, 20);
+            this.lblTimer.TabIndex = 42;
+            this.lblTimer.Text = "Timer";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 507);
             this.ControlBox = false;
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.captchaReset);
             this.Controls.Add(this.captchaLabel);
@@ -221,5 +232,6 @@
         private Button btnClose;
         private Button btnLogin;
         private Label label1;
+        private Label lblTimer;
     }
 }
