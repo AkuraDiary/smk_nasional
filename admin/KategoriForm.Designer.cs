@@ -40,7 +40,7 @@
             // dataKategori
             // 
             this.dataKategori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataKategori.Location = new System.Drawing.Point(16, 104);
+            this.dataKategori.Location = new System.Drawing.Point(16, 130);
             this.dataKategori.Name = "dataKategori";
             this.dataKategori.RowTemplate.Height = 25;
             this.dataKategori.Size = new System.Drawing.Size(301, 287);
@@ -48,7 +48,7 @@
             // 
             // btnTambah
             // 
-            this.btnTambah.Location = new System.Drawing.Point(16, 75);
+            this.btnTambah.Location = new System.Drawing.Point(16, 101);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(75, 23);
             this.btnTambah.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(97, 75);
+            this.btnUpdate.Location = new System.Drawing.Point(97, 101);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(242, 75);
+            this.btnDelete.Location = new System.Drawing.Point(242, 101);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 33);
+            this.textBox1.Location = new System.Drawing.Point(16, 59);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(301, 23);
             this.textBox1.TabIndex = 4;
@@ -83,10 +83,11 @@
             // lblKategori
             // 
             this.lblKategori.AutoSize = true;
-            this.lblKategori.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblKategori.Font = new System.Drawing.Font("Poppins", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblKategori.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblKategori.Location = new System.Drawing.Point(16, 8);
             this.lblKategori.Name = "lblKategori";
-            this.lblKategori.Size = new System.Drawing.Size(65, 22);
+            this.lblKategori.Size = new System.Drawing.Size(158, 48);
             this.lblKategori.TabIndex = 5;
             this.lblKategori.Text = "KATEGORI";
             // 
@@ -101,7 +102,7 @@
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.dataKategori);
             this.Name = "KategoriForm";
-            this.Size = new System.Drawing.Size(331, 423);
+            this.Size = new System.Drawing.Size(340, 423);
             ((System.ComponentModel.ISupportInitialize)(this.dataKategori)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -105,6 +105,7 @@ namespace studikasus_smk_nasional
                         
                         utilities.currentUser = user; // set the logged user
                         MessageBox.Show("Login as " +utilities.currentUser.username +" Success");
+                        sql_utilities.con.Close();
                         moveToMainMenu();
                     }
                    
@@ -144,6 +145,7 @@ namespace studikasus_smk_nasional
         {
             Invoke(new Action(() =>
             {
+                logincounter = 0;
                 btnLogin.Enabled = true;
                 resetCaptcha();
                 lblTimer.Hide();
