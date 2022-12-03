@@ -16,5 +16,28 @@ namespace studikasus_smk_nasional
         {
             InitializeComponent();
         }
+
+        private void MenuAdmin_Load(object sender, EventArgs e)
+        {
+            hideAllUserControl();
+        }
+
+        private void hideAllUserControl()
+        {
+            kategoriForm.Visible = false;
+        }
+
+        
+
+        private void showForm(UserControl form)
+        {
+            hideAllUserControl();
+            form.Visible = true;
+        }
+
+        private void btnKategoriBuku_Click(object sender, EventArgs e)
+        {
+            showForm(kategoriForm);
+        }
     }
 }

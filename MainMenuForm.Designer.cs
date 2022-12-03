@@ -32,6 +32,7 @@
             this.menuAnggotaFragment = new studikasus_smk_nasional.MenuAnggota();
             this.menuAdminFragment = new studikasus_smk_nasional.MenuAdmin();
             this.labelWelcome = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,9 +40,9 @@
             // 
             this.panelContainer.Controls.Add(this.menuAnggotaFragment);
             this.panelContainer.Controls.Add(this.menuAdminFragment);
-            this.panelContainer.Location = new System.Drawing.Point(12, 72);
+            this.panelContainer.Location = new System.Drawing.Point(0, 51);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(776, 387);
+            this.panelContainer.Size = new System.Drawing.Size(800, 420);
             this.panelContainer.TabIndex = 0;
             // 
             // menuAnggotaFragment
@@ -50,6 +51,7 @@
             this.menuAnggotaFragment.Name = "menuAnggotaFragment";
             this.menuAnggotaFragment.Size = new System.Drawing.Size(776, 384);
             this.menuAnggotaFragment.TabIndex = 0;
+            this.menuAnggotaFragment.Load += new System.EventHandler(this.menuAnggotaFragment_Load);
             // 
             // menuAdminFragment
             // 
@@ -66,7 +68,7 @@
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Poppins", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelWelcome.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelWelcome.Location = new System.Drawing.Point(13, 9);
+            this.labelWelcome.Location = new System.Drawing.Point(0, 0);
             this.labelWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(253, 48);
@@ -74,11 +76,26 @@
             this.labelWelcome.Text = "Selamat Datang ";
             this.labelWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(704, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(84, 29);
+            this.btnLogout.TabIndex = 43;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 471);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.panelContainer);
             this.Name = "MainMenuForm";
@@ -93,8 +110,9 @@
         #endregion
 
         private FlowLayoutPanel panelContainer;
-        private Label labelWelcome;
         private MenuAnggota menuAnggotaFragment;
         private MenuAdmin menuAdminFragment;
+        private Label labelWelcome;
+        private Button btnLogout;
     }
 }

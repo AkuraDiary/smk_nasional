@@ -110,7 +110,7 @@ namespace studikasus_smk_nasional
                    
                     else
                     {
-                        MessageBox.Show("Invalid login");
+                        MessageBox.Show("Invalid login", "Error", MessageBoxButtons.OK , MessageBoxIcon.Error);
                         logincounter++;
                         disableLoginTemp();
                     }
@@ -155,7 +155,6 @@ namespace studikasus_smk_nasional
         {
             if (formIsValid())
             {
-                //TODO DO Login Here
                 doLogin();
                 
             }
@@ -163,9 +162,10 @@ namespace studikasus_smk_nasional
 
         void moveToMainMenu()
         {
+            this.Hide();
             MainMenuForm mainMenuForm = new MainMenuForm();
             mainMenuForm.Show();
-            this.Hide();
+            
         }
 
         private void LoginForm_KeyDown(object sender, KeyEventArgs e)

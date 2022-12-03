@@ -20,6 +20,25 @@ namespace studikasus_smk_nasional
             InitializeComponent();
             labelWelcome.Text ="Selamat Datang " + utilities.currentUser.username;
 
+         
+        }
+        
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            utilities.currentUser = null;
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
+        private void menuAnggotaFragment_Load(object sender, EventArgs e)
+        {
             if (utilities.currentUser.level == "admin")
             {
                 menuAdminFragment.Visible = true;
@@ -30,12 +49,6 @@ namespace studikasus_smk_nasional
                 menuAdminFragment.Visible = false;
                 menuAnggotaFragment.Visible = true;
             }
-
-        }
-        
-
-        private void MainMenuForm_Load(object sender, EventArgs e)
-        {
 
         }
     }
