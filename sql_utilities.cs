@@ -14,6 +14,7 @@ namespace studikasus_smk_nasional
         static public SqlCommand cmd;
         static public SqlDataAdapter adapter = new SqlDataAdapter();
         static public SqlDataReader reader;
-        static public DataTable dataTable = new DataTable();
+        //static public DataTable dataTable = new DataTable();
+        
     }
 }

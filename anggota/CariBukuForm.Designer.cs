@@ -60,15 +60,16 @@
             this.btnSearch.TabIndex = 43;
             this.btnSearch.Text = "Cari";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.cariBuku_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 15);
+            this.label1.Size = new System.Drawing.Size(187, 15);
             this.label1.TabIndex = 44;
-            this.label1.Text = "Pencarian Buku";
+            this.label1.Text = "Pencarian Buku Berdasarkan Judul";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // edtSearchBook
@@ -98,6 +99,7 @@
             this.Controls.Add(this.lblCariBuku);
             this.Name = "CariBukuForm";
             this.Size = new System.Drawing.Size(596, 359);
+            this.Load += new System.EventHandler(this.CariBukuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataBuku)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
