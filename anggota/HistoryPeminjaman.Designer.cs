@@ -70,6 +70,7 @@
             this.btnSearch.TabIndex = 48;
             this.btnSearch.Text = "Cari";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblHistoryPinjam
             // 

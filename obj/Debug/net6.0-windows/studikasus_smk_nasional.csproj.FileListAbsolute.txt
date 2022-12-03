@@ -30,3 +30,11 @@ E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-wind
 E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.anggota.HistoryPeminjaman.resources
 E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.HistoryPengembalian.resources
 E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.MasterUser.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.Peminjaman.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.Pengembalian.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.DataPeminjaman.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.DetailPeminjaman.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.MasterAnggota.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.MasterBuku.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.MasterLokasi.resources
+E:\Codelabs\vbcodelab\smk_nasional\studikasus_smk_nasional\obj\Debug\net6.0-windows\studikasus_smk_nasional.admin.MasterPetugas.resources

@@ -39,8 +39,10 @@
             this.edtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBoxLevel = new System.Windows.Forms.GroupBox();
-            this.radioAdmin = new System.Windows.Forms.RadioButton();
             this.radioUser = new System.Windows.Forms.RadioButton();
+            this.radioAdmin = new System.Windows.Forms.RadioButton();
+            this.btnPilihPetugas = new System.Windows.Forms.Button();
+            this.btnPilihAnggota = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataBuku)).BeginInit();
             this.groupBoxLevel.SuspendLayout();
             this.SuspendLayout();
@@ -151,17 +153,6 @@
             this.groupBoxLevel.TabStop = false;
             this.groupBoxLevel.Text = "Level";
             // 
-            // radioAdmin
-            // 
-            this.radioAdmin.AutoSize = true;
-            this.radioAdmin.Location = new System.Drawing.Point(6, 22);
-            this.radioAdmin.Name = "radioAdmin";
-            this.radioAdmin.Size = new System.Drawing.Size(59, 19);
-            this.radioAdmin.TabIndex = 58;
-            this.radioAdmin.TabStop = true;
-            this.radioAdmin.Text = "admin";
-            this.radioAdmin.UseVisualStyleBackColor = true;
-            // 
             // radioUser
             // 
             this.radioUser.AutoSize = true;
@@ -173,10 +164,41 @@
             this.radioUser.Text = "user";
             this.radioUser.UseVisualStyleBackColor = true;
             // 
+            // radioAdmin
+            // 
+            this.radioAdmin.AutoSize = true;
+            this.radioAdmin.Location = new System.Drawing.Point(6, 22);
+            this.radioAdmin.Name = "radioAdmin";
+            this.radioAdmin.Size = new System.Drawing.Size(59, 19);
+            this.radioAdmin.TabIndex = 58;
+            this.radioAdmin.TabStop = true;
+            this.radioAdmin.Text = "admin";
+            this.radioAdmin.UseVisualStyleBackColor = true;
+            // 
+            // btnPilihPetugas
+            // 
+            this.btnPilihPetugas.Location = new System.Drawing.Point(373, 53);
+            this.btnPilihPetugas.Name = "btnPilihPetugas";
+            this.btnPilihPetugas.Size = new System.Drawing.Size(97, 24);
+            this.btnPilihPetugas.TabIndex = 58;
+            this.btnPilihPetugas.Text = "Pilih Petugas";
+            this.btnPilihPetugas.UseVisualStyleBackColor = true;
+            // 
+            // btnPilihAnggota
+            // 
+            this.btnPilihAnggota.Location = new System.Drawing.Point(476, 53);
+            this.btnPilihAnggota.Name = "btnPilihAnggota";
+            this.btnPilihAnggota.Size = new System.Drawing.Size(94, 24);
+            this.btnPilihAnggota.TabIndex = 59;
+            this.btnPilihAnggota.Text = "Pilih Anggota";
+            this.btnPilihAnggota.UseVisualStyleBackColor = true;
+            // 
             // MasterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnPilihAnggota);
+            this.Controls.Add(this.btnPilihPetugas);
             this.Controls.Add(this.groupBoxLevel);
             this.Controls.Add(this.edtPass);
             this.Controls.Add(this.label2);
@@ -214,5 +236,7 @@
         private GroupBox groupBoxLevel;
         private RadioButton radioUser;
         private RadioButton radioAdmin;
+        private Button btnPilihPetugas;
+        private Button btnPilihAnggota;
     }
 }

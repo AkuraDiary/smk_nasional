@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.menuAnggotaFragment = new studikasus_smk_nasional.MenuAnggota();
             this.menuAdminFragment = new studikasus_smk_nasional.MenuAdmin();
+            this.menuAnggotaFragment = new studikasus_smk_nasional.MenuAnggota();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelContainer.SuspendLayout();
@@ -38,27 +38,27 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.Controls.Add(this.menuAnggotaFragment);
             this.panelContainer.Controls.Add(this.menuAdminFragment);
+            this.panelContainer.Controls.Add(this.menuAnggotaFragment);
             this.panelContainer.Location = new System.Drawing.Point(0, 51);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(800, 420);
+            this.panelContainer.Size = new System.Drawing.Size(1074, 530);
             this.panelContainer.TabIndex = 0;
-            // 
-            // menuAnggotaFragment
-            // 
-            this.menuAnggotaFragment.Location = new System.Drawing.Point(3, 3);
-            this.menuAnggotaFragment.Name = "menuAnggotaFragment";
-            this.menuAnggotaFragment.Size = new System.Drawing.Size(776, 384);
-            this.menuAnggotaFragment.TabIndex = 0;
-            this.menuAnggotaFragment.Load += new System.EventHandler(this.menuAnggotaFragment_Load);
             // 
             // menuAdminFragment
             // 
-            this.menuAdminFragment.Location = new System.Drawing.Point(3, 393);
+            this.menuAdminFragment.Location = new System.Drawing.Point(3, 3);
             this.menuAdminFragment.Name = "menuAdminFragment";
-            this.menuAdminFragment.Size = new System.Drawing.Size(776, 378);
+            this.menuAdminFragment.Size = new System.Drawing.Size(1059, 517);
             this.menuAdminFragment.TabIndex = 1;
+            // 
+            // menuAnggotaFragment
+            // 
+            this.menuAnggotaFragment.Location = new System.Drawing.Point(3, 526);
+            this.menuAnggotaFragment.Name = "menuAnggotaFragment";
+            this.menuAnggotaFragment.Size = new System.Drawing.Size(1047, 384);
+            this.menuAnggotaFragment.TabIndex = 0;
+            this.menuAnggotaFragment.Load += new System.EventHandler(this.menuAnggotaFragment_Load);
             // 
             // labelWelcome
             // 
@@ -78,11 +78,11 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.BackColor = System.Drawing.Color.Firebrick;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(704, 12);
+            this.btnLogout.Location = new System.Drawing.Point(966, 12);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(84, 29);
             this.btnLogout.TabIndex = 43;
@@ -94,12 +94,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 471);
+            this.ClientSize = new System.Drawing.Size(1087, 583);
+            this.ControlBox = false;
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.panelContainer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainMenuForm";
-            this.Text = "Main Menu";
+            this.Text = "PERPUSTAKAAN APP";
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.panelContainer.ResumeLayout(false);
             this.ResumeLayout(false);
